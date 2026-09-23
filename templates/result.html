@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Result - The Heart Diagnostics Centre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assessment.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="heart-emoji">🫀</div>
+            <div class="logo-text">
+                <h1>The Heart</h1>
+                <span>Diagnostics Centre</span>
+            </div>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main class="assessment-page">
+        <div class="assessment-card result-card {{ 'high-risk' if result == 'high' else 'low-risk' }}">
+
+            {% if patient_name %}
+            <p class="result-greeting">Hi {{ patient_name }},</p>
+            {% endif %}
+
+            {% if result == 'high' %}
+                <div class="result-icon">⚠️</div>
+                <h2>High Risk of Heart Disease</h2>
+                <p>Kindly consult a doctor for further evaluation.</p>
+                <a href="{{ url_for('consultation') }}" class="primary-btn">Book Consultation <span>→</span></a>
+            {% else %}
+                <div class="result-icon">✅</div>
+                <h2>Low Risk of Heart Disease</h2>
+                <p>Take care and maintain a healthy lifestyle.</p>
+            {% endif %}
+
+            <a href="{{ url_for('assessment') }}" class="secondary-btn">Take Assessment Again</a>
+
+        </div>
+    </main>
+
+</body>
+</html>

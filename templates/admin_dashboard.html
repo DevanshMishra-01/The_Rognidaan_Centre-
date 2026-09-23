@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard - Heart Diagnostics Centre</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        padding: 30px;
+        color: #333;
+    }
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .top-bar h1 {
+        color: #b02a2a;
+        margin: 0;
+        font-size: 24px;
+    }
+    .top-bar a {
+        color: #b02a2a;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .section {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        overflow-x: auto;
+    }
+    .section h2 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+        min-width: 700px;
+    }
+    th, td {
+        padding: 8px 10px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        white-space: nowrap;
+    }
+    th {
+        background: #fafafa;
+        color: #555;
+    }
+    .badge-high {
+        color: #b02a2a;
+        font-weight: bold;
+    }
+    .badge-low {
+        color: #2a8f4f;
+        font-weight: bold;
+    }
+    .empty {
+        color: #999;
+        font-style: italic;
+        padding: 10px 0;
+    }
+</style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <h1>Admin Dashboard</h1>
+        <a href="{{ url_for('admin_logout') }}">Log Out</a>
+    </div>
+
+    <div class="section">
+        <h2>Heart Assessment Predictions ({{ predictions|length }})</h2>
+        {% if predictions %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Patient</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Chest Pain</th>
+                <th>Resting BP</th>
+                <th>Cholesterol</th>
+                <th>Fasting BS</th>
+                <th>Resting ECG</th>
+                <th>Max HR</th>
+                <th>Exercise Angina</th>
+                <th>Oldpeak</th>
+                <th>ST Slope</th>
+                <th>Result</th>
+                <th>Date</th>
+            </tr>
+            {% for p in predictions %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.patient_name }}</td>
+                <td>{{ p.age }}</td>
+                <td>{{ p.sex }}</td>
+                <td>{{ p.chest_pain }}</td>
+                <td>{{ p.resting_bp }}</td>
+                <td>{{ p.cholesterol }}</td>
+                <td>{{ p.fasting_bs }}</td>
+                <td>{{ p.resting_ecg }}</td>
+                <td>{{ p.max_hr }}</td>
+                <td>{{ p.exercise_angina }}</td>
+                <td>{{ p.oldpeak }}</td>
+                <td>{{ p.st_slope }}</td>
+                <td class="{{ 'badge-high' if p.result == 'high' else 'badge-low' }}">{{ p.result }}</td>
+                <td>{{ p.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p class="empty">No predictions recorded yet.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>Consultation Bookings ({{ bookings|length }})</h2>
+        {% if bookings %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Patient</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Doctor</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Booked On</th>
+            </tr>
+            {% for b in bookings %}
+            <tr>
+                <td>{{ b.id }}</td>
+                <td>{{ b.patient_name }}</td>
+                <td>{{ b.phone }}</td>
+                <td>{{ b.email }}</td>
+                <td>{{ b.doctor }}</td>
+                <td>{{ b.appointment_date }}</td>
+                <td>{{ b.appointment_time }}</td>
+                <td>{{ b.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p class="empty">No bookings recorded yet.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

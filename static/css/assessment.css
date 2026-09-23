@@ -1,0 +1,78 @@
+.assessment-page {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+    background: #fdf3f2;
+}
+
+.assessment-card {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.assessment-card h2 {
+    color: #1f2a44;
+    margin-bottom: 8px;
+}
+
+.assessment-sub {
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2a44;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.assessment-form button.primary-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.result-card {
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.result-card.high-risk h2 { color: #d63b57; }
+.result-card.low-risk h2 { color: #1a9c5f; }
+
+.result-card a {
+    display: inline-block;
+    margin: 10px 8px 0;
+}

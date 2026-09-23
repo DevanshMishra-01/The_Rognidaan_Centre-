@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Assessment - The Heart Diagnostics Centre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assessment.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="heart-emoji">🫀</div>
+            <div class="logo-text">
+                <h1>The Heart</h1>
+                <span>Diagnostics Centre</span>
+            </div>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main class="assessment-page">
+
+        <div class="assessment-card">
+
+            <h2>Heart Health Assessment</h2>
+            <p class="assessment-sub">Fill in your details below to check your heart disease risk.</p>
+
+            <form method="POST" action="{{ url_for('assessment') }}" class="assessment-form">
+
+                <div class="form-group">
+                    <label>Patient Name</label>
+                    <input type="text" name="patient_name" placeholder="Your name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" name="age" min="18" max="100" value="40" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sex</label>
+                        <select name="sex" required>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Chest Pain Type</label>
+                        <select name="chest_pain" required>
+                            <option value="ATA">Atypical Angina (ATA)</option>
+                            <option value="NAP">Non-Anginal Pain (NAP)</option>
+                            <option value="TA">Typical Angina (TA)</option>
+                            <option value="ASY">Asymptomatic (ASY)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Resting Blood Pressure (mm Hg)</label>
+                        <input type="number" name="resting_bp" min="80" max="200" value="120" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Cholesterol (mg/dL)</label>
+                        <input type="number" name="cholesterol" min="100" max="600" value="200" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fasting Blood Sugar &gt; 120 mg/dL</label>
+                        <select name="fasting_bs" required>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Resting ECG</label>
+                        <select name="resting_ecg" required>
+                            <option value="Normal">Normal</option>
+                            <option value="ST">ST</option>
+                            <option value="LVH">LVH</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Max Heart Rate</label>
+                        <input type="number" name="max_hr" min="60" max="220" value="150" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Exercise-Induced Angina</label>
+                        <select name="exercise_angina" required>
+                            <option value="N">No</option>
+                            <option value="Y">Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Oldpeak (ST Depression)</label>
+                        <input type="number" step="0.1" name="oldpeak" min="0" max="6" value="1.0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>ST Slope</label>
+                    <select name="st_slope" required>
+                        <option value="Up">Up</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Down">Down</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Predict My Risk <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

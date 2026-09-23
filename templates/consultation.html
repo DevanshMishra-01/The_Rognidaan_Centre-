@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Doctors Consultation | The Heart Diagnostics Centre
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/consultation.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="navbar">
+
+    <a href="/" class="logo">
+
+        <div class="heart-emoji">
+            🫀
+        </div>
+
+        <div class="logo-text">
+
+            <h1>
+                The Heart
+            </h1>
+
+            <span>
+                Diagnostics Centre
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <nav>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/#about">
+            About Us
+        </a>
+
+        <a href="/#services">
+            Services
+        </a>
+
+        <a href="/#heart-health">
+            Heart Health
+        </a>
+
+        <a href="/consultation" class="active">
+            Consultation
+        </a>
+
+    </nav>
+
+
+    <a href="/consultation"
+       class="appointment-btn">
+
+        Book Appointment
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================================
+     PAGE HERO
+========================================= -->
+
+<section class="page-hero">
+
+    <div class="page-hero-content">
+
+        <div class="small-heading">
+
+            <span></span>
+
+            DOCTORS & CONSULTATION
+
+        </div>
+
+
+        <h2>
+
+            Expert Care,
+            <strong>When You Need It.</strong>
+
+        </h2>
+
+
+        <p>
+
+            Connect with our healthcare professionals and
+            schedule a consultation at a time convenient
+            for you.
+
+        </p>
+
+    </div>
+
+
+    <div class="page-heart">
+
+        🫀
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     DOCTORS SECTION
+========================================= -->
+
+<section class="doctors-section">
+
+    <div class="section-heading">
+
+        <div class="small-heading">
+
+            <span></span>
+
+            OUR SPECIALISTS
+
+            <span></span>
+
+        </div>
+
+
+        <h2>
+
+            Meet Our
+            <strong>Doctors</strong>
+
+        </h2>
+
+
+        <p>
+
+            Our healthcare team is committed to providing
+            compassionate and patient-focused cardiac care.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="doctors-grid">
+
+
+        <!-- DOCTOR 1 -->
+
+        <div class="doctor-profile">
+
+            <div class="doctor-photo">
+
+                <div class="doctor-avatar">
+                    👨‍⚕️
+                </div>
+
+            </div>
+
+
+            <div class="doctor-details">
+
+                <span class="doctor-speciality">
+                    CARDIOLOGIST
+                </span>
+
+
+                <h3>
+                    Dr. Aarav Sharma
+                </h3>
+
+
+                <p>
+
+                    Specialist in cardiovascular health,
+                    heart disease assessment and preventive
+                    cardiac care.
+
+                </p>
+
+
+                <div class="doctor-meta">
+
+                    <span>
+                        🫀 Cardiology
+                    </span>
+
+                    <span>
+                        ★ 4.9
+                    </span>
+
+                </div>
+
+
+                <a href="#booking"
+                   class="doctor-button">
+
+                    Book Consultation
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DOCTOR 2 -->
+
+        <div class="doctor-profile">
+
+            <div class="doctor-photo">
+
+                <div class="doctor-avatar">
+                    👩‍⚕️
+                </div>
+
+            </div>
+
+
+            <div class="doctor-details">
+
+                <span class="doctor-speciality">
+                    CARDIOLOGY SPECIALIST
+                </span>
+
+
+                <h3>
+                    Dr. Ananya Mehta
+                </h3>
+
+
+                <p>
+
+                    Focused on cardiovascular risk assessment,
+                    preventive healthcare and patient education.
+
+                </p>
+
+
+                <div class="doctor-meta">
+
+                    <span>
+                        🫀 Cardiology
+                    </span>
+
+                    <span>
+                        ★ 4.8
+                    </span>
+
+                </div>
+
+
+                <a href="#booking"
+                   class="doctor-button">
+
+                    Book Consultation
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DOCTOR 3 -->
+
+        <div class="doctor-profile">
+
+            <div class="doctor-photo">
+
+                <div class="doctor-avatar">
+                    👨‍⚕️
+                </div>
+
+            </div>
+
+
+            <div class="doctor-details">
+
+                <span class="doctor-speciality">
+                    HEART CARE SPECIALIST
+                </span>
+
+
+                <h3>
+                    Dr. Rohan Kapoor
+                </h3>
+
+
+                <p>
+
+                    Provides comprehensive heart health
+                    consultations and cardiovascular
+                    wellness guidance.
+
+                </p>
+
+
+                <div class="doctor-meta">
+
+                    <span>
+                        🫀 Heart Care
+                    </span>
+
+                    <span>
+                        ★ 4.9
+                    </span>
+
+                </div>
+
+
+                <a href="#booking"
+                   class="doctor-button">
+
+                    Book Consultation
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     BOOKING SECTION
+========================================= -->
+
+<section class="booking-section"
+         id="booking">
+
+
+    <div class="booking-container">
+
+
+        <!-- LEFT INFORMATION -->
+
+        <div class="booking-information">
+
+            <div class="small-heading">
+
+                <span></span>
+
+                BOOK AN APPOINTMENT
+
+            </div>
+
+
+            <h2>
+
+                Schedule Your
+                <strong>Consultation.</strong>
+
+            </h2>
+
+
+            <p>
+
+                Fill in your details and select your preferred
+                doctor, date and time. Our team will review
+                your request and assist you with your appointment.
+
+            </p>
+
+
+            <div class="booking-benefits">
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Professional Care
+                        </h3>
+
+                        <p>
+                            Patient-focused consultation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Convenient Booking
+                        </h3>
+
+                        <p>
+                            Choose your preferred time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Personalised Attention
+                        </h3>
+
+                        <p>
+                            Care designed around you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BOOKING FORM -->
+
+        <div class="booking-card">
+
+
+            {% if booking_success %}
+
+                <div class="success-message">
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+
+                    <h2>
+                        Request Received
+                    </h2>
+
+
+                    <p>
+
+                        Thank you for requesting a consultation.
+                        Our team will contact you to confirm
+                        your appointment.
+
+                    </p>
+
+
+                    <a href="/"
+                       class="back-home">
+
+                        Return to Home
+
+                    </a>
+
+                </div>
+
+
+            {% else %}
+
+
+                <form method="POST"
+                      action="/consultation">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="patient_name">
+                            Patient Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="patient_name"
+                            name="patient_name"
+                            placeholder="Enter patient's full name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+91 XXXXX XXXXX"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="patient@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- DOCTOR -->
+
+                    <div class="form-group">
+
+                        <label for="doctor">
+                            Select Doctor
+                        </label>
+
+                        <select
+                            id="doctor"
+                            name="doctor"
+                            required
+                        >
+
+                            <option value="">
+                                Choose a doctor
+                            </option>
+
+                            <option value="Dr. Aarav Sharma">
+                                Dr. Aarav Sharma —
+                                Cardiologist
+                            </option>
+
+                            <option value="Dr. Ananya Mehta">
+                                Dr. Ananya Mehta —
+                                Cardiology Specialist
+                            </option>
+
+                            <option value="Dr. Rohan Kapoor">
+                                Dr. Rohan Kapoor —
+                                Heart Care Specialist
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- DATE + TIME -->
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="appointment_date">
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="appointment_date"
+                                name="appointment_date"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="appointment_time">
+                                Preferred Time
+                            </label>
+
+                            <select
+                                id="appointment_time"
+                                name="appointment_time"
+                                required
+                            >
+
+                                <option value="">
+                                    Select time
+                                </option>
+
+                                <option value="09:00 AM">
+                                    09:00 AM
+                                </option>
+
+                                <option value="10:00 AM">
+                                    10:00 AM
+                                </option>
+
+                                <option value="11:00 AM">
+                                    11:00 AM
+                                </option>
+
+                                <option value="12:00 PM">
+                                    12:00 PM
+                                </option>
+
+                                <option value="02:00 PM">
+                                    02:00 PM
+                                </option>
+
+                                <option value="03:00 PM">
+                                    03:00 PM
+                                </option>
+
+                                <option value="04:00 PM">
+                                    04:00 PM
+                                </option>
+
+                                <option value="05:00 PM">
+                                    05:00 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REASON -->
+
+                    <div class="form-group">
+
+                        <label for="reason">
+                            Reason for Consultation
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            name="reason"
+                            rows="4"
+                            placeholder="Briefly describe the reason for your consultation..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+
+                        Request Consultation
+
+                        <span>→</span>
+
+                    </button>
+
+
+                    <p class="form-note">
+
+                        🔒 Your information will be handled
+                        confidentially.
+
+                    </p>
+
+                </form>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <a href="/" class="logo">
+
+                <div class="heart-emoji">
+                    🫀
+                </div>
+
+
+                <div class="logo-text">
+
+                    <h1>
+                        The Heart
+                    </h1>
+
+                    <span>
+                        Diagnostics Centre
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <p>
+                Your health matters to us the most.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/#about">
+                About Us
+            </a>
+
+            <a href="/#services">
+                Services
+            </a>
+
+            <a href="/#heart-health">
+                Heart Health
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="/#heart-health">
+                Heart Assessment
+            </a>
+
+            <a href="/#services">
+                Cardiac Diagnostics
+            </a>
+
+            <a href="/consultation">
+                Doctors Consultation
+            </a>
+
+            
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Your City, India
+            </p>
+
+            <p>
+                ☎ +91 XXXXX XXXXX
+            </p>
+
+            <p>
+                ✉ care@heartdiagnostics.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 The Heart Diagnostics Centre.
+            All rights reserved.
+        </p>
+
+        <p>
+            Your health matters to us the most.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>

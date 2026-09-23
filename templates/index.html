@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Rognidaan centre</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="heart-emoji">🫀</div>
+
+            <div class="logo-text">
+                <h1>The Rognidaan</h1>
+                <span>Centre</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#heart-health">Heart Health</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+
+        <a href="#consultation" class="appointment-btn">
+            Book Appointment
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="small-heading">
+                    <span></span>
+                    ADVANCED HEART CARE
+                </div>
+
+
+                <h2>
+                    Your Heart Deserves
+                    <strong>Expert Care.</strong>
+                </h2>
+
+
+                <p class="slogan">
+                    Your health matters to us the most.
+                </p>
+
+
+                <p class="hero-description">
+                    At The Rognidaan centre, we combine advanced
+                    diagnostic technology with compassionate healthcare
+                    to help you understand, monitor and protect your heart.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="{{ url_for('assessment') }}" class="primary-btn">
+                        Get Heart Assessment
+                        <span>→</span>
+                    </a>
+
+                    <a href="#about" class="secondary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+
+                <div class="trust-points">
+
+                    <div>
+                        <span class="check">✓</span>
+                        Advanced Diagnostics
+                    </div>
+
+                    <div>
+                        <span class="check">✓</span>
+                        Expert Care
+                    </div>
+
+                    <div>
+                        <span class="check">✓</span>
+                        Patient Focused
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual">
+
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-placeholder">
+
+                        <div class="doctor-icon">
+                            🫀
+                        </div>
+
+                    </div>
+
+
+                    <div class="doctor-info">
+
+                        <h3>
+                            Heart Care
+                        </h3>
+
+                        <p>
+                            Advanced Cardiac Diagnostics
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEART MONITOR -->
+
+                <div class="heartbeat-card">
+
+                    <div class="heartbeat-header">
+
+                        <span>
+                            Heart Monitoring
+                        </span>
+
+                        <span class="live-dot">
+                            ●
+                        </span>
+
+                    </div>
+
+
+                    <div class="heartbeat-line">
+                        <span></span>
+                    </div>
+
+
+                    <div class="heartbeat-rate">
+
+                        <strong>
+                            72
+                        </strong>
+
+                        <small>
+                            BPM
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section class="services-section" id="services">
+
+            <div class="section-heading">
+
+                <div class="small-heading">
+
+                    <span></span>
+
+                    OUR SERVICES
+
+                    <span></span>
+
+                </div>
+
+
+                <h2>
+                    Comprehensive Heart
+                    <strong>Diagnostics</strong>
+                </h2>
+
+
+                <p>
+                    Modern diagnostic and healthcare solutions designed
+                    to help detect, understand and manage cardiovascular
+                    health.
+                </p>
+
+            </div>
+
+
+
+            <div class="services-grid">
+
+
+                <!-- SERVICE 1 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🫀
+                    </div>
+
+
+                    <h3>
+                        Heart Health Assessment
+                    </h3>
+
+
+                    <p>
+                        A comprehensive assessment of important
+                        cardiovascular health indicators to help
+                        understand your heart health.
+                    </p>
+
+
+                    <a href="#heart-health">
+                        Explore Service →
+                    </a>
+
+                </div>
+
+
+
+                <!-- SERVICE 2 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ◉
+                    </div>
+
+
+                    <h3>
+                        Cardiac Diagnostics
+                    </h3>
+
+
+                    <p>
+                        Advanced diagnostic approaches to help evaluate
+                        cardiovascular health and identify important
+                        risk factors.
+                    </p>
+
+
+                    <a href="#heart-health">
+                        Explore Service →
+                    </a>
+
+                </div>
+
+
+
+                <!-- SERVICE 3 -->
+
+                <div class="service-card" id="consultation">
+
+                    <div class="service-icon">
+                        🩺
+                    </div>
+
+
+                    <h3>
+                        Doctors Consultation & Bookings
+                    </h3>
+
+
+                    <p>
+                        Connect with qualified doctors for personalised
+                        consultations and conveniently schedule your
+                        appointment with our healthcare team.
+                    </p>
+
+
+                    <a href="#contact">
+                        Book a Consultation →
+                    </a>
+
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HEART HEALTH SECTION
+        ========================== -->
+
+        <section class="heart-health-section" id="heart-health">
+
+            <div class="heart-health-content">
+
+                <div class="small-heading">
+                    <span></span>
+                    HEART HEALTH
+                </div>
+
+
+                <h2>
+                    Know Your Heart.
+                    <strong>Protect Your Future.</strong>
+                </h2>
+
+
+                <p>
+                    Understanding your cardiovascular health is an
+                    important step toward making informed healthcare
+                    decisions.
+                </p>
+
+
+                <div class="health-stats">
+
+                    <div class="health-stat">
+                        <strong>24/7</strong>
+                        <span>Care Support</span>
+                    </div>
+
+
+                    <div class="health-stat">
+                        <strong>100%</strong>
+                        <span>Patient Focused</span>
+                    </div>
+
+
+                    <div class="health-stat">
+                        <strong>1</strong>
+                        <span>Heart to Protect</span>
+                    </div>
+
+                </div>
+
+
+                <a href="{{ url_for('assessment') }}" class="primary-btn">
+                    Start Your Assessment
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="large-heart">
+
+                <div class="heart-glow"></div>
+
+                <div class="heart-symbol">
+                    🫀
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+
+        <section class="about-section" id="about">
+
+
+            <div class="about-image">
+
+                <div class="about-heart">
+                    🫀
+                </div>
+
+
+                <div class="experience-card">
+
+                    <strong>24/7</strong>
+
+                    <span>
+                        Care & Support
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-content">
+
+                <div class="small-heading">
+
+                    <span></span>
+
+                    WHY CHOOSE US
+
+                </div>
+
+
+                <h2>
+                    Healthcare Built Around
+                    <strong>You.</strong>
+                </h2>
+
+
+                <p>
+                    We believe healthcare should be more than numbers,
+                    reports and diagnoses. Every patient deserves clear
+                    information, careful assessment and compassionate
+                    support.
+                </p>
+
+
+
+                <div class="about-points">
+
+
+                    <div class="about-point">
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Patient First
+                            </h3>
+
+                            <p>
+                                Your wellbeing remains at the centre
+                                of everything we do.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="about-point">
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Modern Technology
+                            </h3>
+
+                            <p>
+                                We use modern diagnostic approaches
+                                to support informed healthcare.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="about-point">
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Trusted Information
+                            </h3>
+
+                            <p>
+                                We present health information clearly
+                                and responsibly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONSULTATION CTA
+        ========================== -->
+
+        <section class="consultation-section">
+
+            <div class="consultation-content">
+
+                <div class="consultation-icon">
+                    🩺
+                </div>
+
+
+                <div>
+
+                    <div class="small-heading">
+                        <span></span>
+                        NEED MEDICAL GUIDANCE?
+                    </div>
+
+
+                    <h2>
+                        Talk to a Doctor.
+                    </h2>
+
+
+                    <p>
+                        Schedule a consultation with our healthcare
+                        professionals and get the guidance you need.
+                    </p>
+
+                </div>
+
+
+                <a href="{{ url_for('consultation') }}" class="consultation-btn">
+                   Book Consultation
+                    <span>→</span>
+                </a>  
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="contact">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <div class="heart-emoji">
+                        🫀
+                    </div>
+
+
+                    <div class="logo-text">
+
+                        <h1>
+                            The Heart
+                        </h1>
+
+                        <span>
+                            Diagnostics Centre
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Your health matters to us the most.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#heart-health">
+                    Heart Health
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+
+                <a href="#heart-health">
+                    Heart Assessment
+                </a>
+
+                <a href="#services">
+                    Cardiac Diagnostics
+                </a>
+
+                <a href="#consultation">
+                    Doctors Consultation
+                </a>
+
+                
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+                    📍 Ayodhya, India
+                </p>
+
+                <p>
+                    ☎ +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    ✉ care@Rognidaan.org
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+                <div class="footer-bottom">
+
+            <p>
+                © 2026 The Rognidaan centre.
+                All rights reserved.
+            </p>
+
+
+            <p>
+                For informational and diagnostic support purposes.
+            </p>
+
+            <p>
+                <a href="{{ url_for('admin_login') }}" style="color:#999; font-size:12px;">
+                    Admin
+                </a>
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
